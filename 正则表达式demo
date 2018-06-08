@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>regExp</title>
+	<!-- 利用正则表达式写一个表单验证：
+	1.用户名：10-15的数字或字母
+	2.密码：10-15位的数字或字母
+	3.确认密码：判断两次输入的密码是否一致
+	4.邮箱：xxx@xxx.com/cn/
+	5.提交按钮：必须全部验证成功的情况下才能提交
+	 -->
+	 <style>
+	 	*{
+	 		padding:0;
+	 		margin:0;
+	 	}
+	 	form{
+	 		width:1000px;
+	 		height:600px;
+
+	 		margin:50px auto;
+	 		background-color:#eee;
+	 		text-align:center;
+	 	}
+	 	input{
+	 		
+	 		margin:50px auto;
+
+
+	 	}
+	 	input[type="submit"]{
+	 		display:block;
+	 		width:50px;
+	 		height:50px;
+	 		text-align:center;
+	 		border-radius:50%;
+	 	}
+	 </style>
+</head>
+<body>
+	<form onsubmit="return checkAll()">
+		用户名：<input type="text" id="username" onblur="testUsername()"/><br>
+		<span id="usernameSpan"></span><br>
+
+		密码：<input type="password" id="password" onblur="testPassword()"/><br>
+		<span id="passwordSpan"></span><br>
+
+		确认密码：<input type="password" id="testpassword" onblur="testRepassword()"/><br>
+		<span id="repasswordSpan"></span><br>
+
+		邮箱：<input type="text" id="email" onblur="testEmail()"/><br>
+		<span id="emailSpan"></span><br>
+
+		<input type="submit" value="提交"><br>
+		
+	</form>
+	<script>
+		//用户名：
+		function testUsername(){
+			var reg=/^[0-9a-zA-Z]{10,15}$/;
+			var span=document.getElementById("usernameSpan");
+			var username=document.getElementById("username");
+			if(reg.test(username.value)){
+				span.innerHTML="用户名可用";
+				span.style.fontcolor="green";
+				return trun;
+			}else{
+				span.innerHTML="用户名格式不正确！请输入10-15位数字或字母";
+				span.style.fontcolor="red";
+				return false;
+			}
+
+		}
+		//密码：
+		function testPassword(){
+			var reg=/^[0-9a-zA-Z]{10,15}$/;
+			var password=document.getElementById("password");
+			var span=document.getElementById("passwordSpan");
+			if(reg.test(password.value)){
+				span.innerHTML="密码可用";
+				span.style.fontcolor="green";
+				return trun;
+			}else{
+				span.innerHTML="密码格式不正确！请输入10-15位数字或字母";
+				span.style.fontcolor="red";
+				return false;
+			}
+		}
+		//验证密码
+		function testRepassword(){
+			var password1=document.getElementById("password");
+			var testpassword=document.getElementById("testpassword");
+			var span=document.getElementById("repasswordSpan");
+			if(password1==testpassword){
+				span.innerHTML="密码一致";
+				span.style.fontcolor="green";
+				return trun;
+			}else{
+				span.innerHTML="密码不一致，请重新输入！";
+				span.style.fontcolor="red";
+				return false;
+			}
+		}
+		//邮箱：
+		function testEmail(){
+			var reg=/^[0-9a-zA-Z]+@[0-9a-zA-Z]+(\.[a-zA-Z]{2,3}){2,3}]/;
+			var email=document.getElementById("email");
+			var span=document.getElementById("emailSpan");
+			if(reg.test(email.value)){
+				span.innerHTML="邮箱可用";
+				span.style.fontcolor="green";
+				return trun;
+			}else{
+				span.innerHTML="邮箱格式不正确！请输入如：xxx@xxx.com/cn/";
+				span.style.fontcolor="red";
+				return false;
+			}
+		}
+		//提交检验：
+		function checkAll(){
+			if(testUsername()&&testPassword()&&testRepassword()&&testEmail()){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
