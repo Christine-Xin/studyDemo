@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页布局</title>
+	<link type="text/css" rel="stylesheet" href="./网页布局案例.css">
+</head>
+<body>
+	<!--顶部-->
+	<div class="header">
+		<div><img src="./网页布局图片/images/logo.png"></div>
+		<div>
+			<ul>
+				<li>HOME</li>
+				<li>ABOUT</li>
+				<li>ABOUT</li>
+				<li>GALLERY</li>
+				<li>FACULTY</li>
+				<li>EVENTS</li>
+				<li>CONTACT</li>
+			</ul>
+		</div>
+	</div>
+	<!--banner区-->
+	<div class="banner">
+		<div>
+			<img src="./网页布局图片/images/banner3.jpg">
+		</div>
+		<div class="blank"></div>
+		<div class="banner-text">
+			<input type="text" placeholder="your Name">
+			<input type="text" placeholder="your Phone">
+			<input type="text" placeholder="your Email">
+			<textarea>Write Your Comment Here</textarea>
+			<button>SEND MESSAGE</button>
+		</div>
+	</div>
+	<!--about区-->
+	<div class="about">
+		<!--ABOUT区上部分-->
+		<div class="about-top">
+			<h1>ABOUT</h1>
+			<hr color="#07cbc9"  width="30px" style="margin:0 auto;">
+			<P>Lorem Ipsum is simply dummy text of the printing and type settingindustry.Lorem Ipsum has been the induetry`s standard dummy text ever since the 1500s</P>
+		</div>
+		<div class="about-mid">
+			<div class="about-mid-left">A WORD<br/>ABOUT US</div>
+			<div  class="about-mid-img"><img src="./网页布局图片/images/bb3.jpg"></div>
+			<div  class="about-mid-right">
+				<div>70000<br/> <hr color="#07cbc9"  width="30px" style="margin:0 auto;">Students</div>
+				<div>600<br/> <hr color="#07cbc9"  width="30px" style="margin:0 auto;">Facuity</div>
+			</div>
+			<div class="about-mid-opa">
+				<p>Praesent dignissim viverra est,sed bibendum ligula congue non.Sed ac nislet felis gravida commodo?Suspendisseeget ullamcorper ipsum. Suspendissediam amet.</p>
+				<input class="EXPLORE" type="submit" name="EXPLORE" value="EXPLORE">
+			</div>
+		</div>
+		<!--ABOUT区下部分-->
+		<div class="about-bottom">
+			<div><img src="./网页布局图片/images/b1.jpg"></div>
+			<div class="text">
+				<div>
+					<h1>Library</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typeselling industry</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the induetry`s standard dummy text ever since the 1500s</p>
+					<input class="EXPLORE" type="submit" name="EXPLORE" value="EXPLORE">
+				</div>
+			</div>
+			<div><img src="./网页布局图片/images/b2.jpg"></div>
+			<div class="text">
+				<div>
+					<h1>Computer Lab</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typeselling industry</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the induetry`s standard dummy text ever since the 1500s</p>
+					<input class="EXPLORE" type="submit" name="EXPLORE" value="EXPLORE">
+				</div>
+			</div>
+			<div class="text">
+				<div>
+					<h1>Conference Hall</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typeselling industry</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the induetry`s standard dummy text ever since the 1500s</p>
+					<input class="EXPLORE" type="submit" name="EXPLORE" value="EXPLORE">
+				</div>
+			</div>
+			<div><img src="./网页布局图片/images/b3.jpg"></div>
+			<div class="text">
+				<div>
+					<h1>Play Ground</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typeselling industry</p>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the induetry`s standard dummy text ever since the 1500s</p>
+					<input class="EXPLORE" type="submit" name="EXPLORE" value="EXPLORE">
+				</div>
+			</div>
+			<div><img src="./网页布局图片/images/b4.jpg"></div>
+		</div>
+	</div>
+	<!--gallery区-->
+	<div class="gallery">
+		<!--gallery上部分-->
+		<div class="gallery-top">
+			<h1>GALLERY</h1>
+		    <hr color="#07cbc9"  width="30px" style="margin:0 auto;">
+		    <P>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the induetry`s standard dummy text ever since the 1500s</P>
+		</div>
+		<!--gallery下部分-->
+		<div class="gallery-bottom">
+			<img src="./网页布局图片/images/03-01.jpg">
+			<img src="./网页布局图片/images/03-02.jpg">
+			<img src="./网页布局图片/images/03-03.jpg">
+			<img src="./网页布局图片/images/03-04.jpg">
+			<img src="./网页布局图片/images/03-05.jpg">
+			<img src="./网页布局图片/images/03-06.jpg">
+		</div>
+	</div>
+	<!--页脚区-->
+	<div class="footer">
+		<div>&copy;2016&nbsp;imooc.com&nbsp;京ICP备13046642号</div>
+	</div>
+</body>
+</html>
